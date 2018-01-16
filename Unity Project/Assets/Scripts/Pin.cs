@@ -7,6 +7,7 @@ public class Pin : MonoBehaviour {
     public float speed = 20f;
     public Rigidbody2D rb;
 
+    private float rotatorSpeed;
     private bool isPinned = false;
 
     private void Update()
@@ -17,11 +18,12 @@ public class Pin : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Circle")
+        if (col.tag == "Circle" && col.tag != "Pin")
         {
             transform.SetParent(col.transform);
-            FindObjectOfType<Circle_Rotate>().speed += 5f;
+            Circle_Rotate.circleSpeed += 4f;
             isPinned = true;
+            Score.scorePoints++;
         }
         else if (col.tag == "Pin")
         {

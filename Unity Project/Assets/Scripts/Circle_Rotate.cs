@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Circle_Rotate : MonoBehaviour {
 
-    public float speed = 100f;
+    public static float circleSpeed;
+
+    private void Start()
+    {
+        circleSpeed = 150f;
+    }
 
     private void Update()
     {
-        transform.Rotate(0f, 0f, speed * Time.deltaTime);
+        transform.Rotate(0f, 0f, circleSpeed * Time.deltaTime);
     }
 }
