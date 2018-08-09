@@ -8,7 +8,7 @@ public class Circle_Rotate : MonoBehaviour {
 
     private void Start()
     {
-        circleSpeed = 150f;
+        circleSpeed = 125;
     }
 
     private void Update()

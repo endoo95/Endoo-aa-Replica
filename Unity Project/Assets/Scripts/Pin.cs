@@ -21,7 +21,7 @@ public class Pin : MonoBehaviour {
         if (col.tag == "Circle" && col.tag != "Pin")
         {
             transform.SetParent(col.transform);
-            Circle_Rotate.circleSpeed += 4f;
+            Circle_Rotate.circleSpeed += 3f;
             isPinned = true;
             Score.scorePoints++;
         }
