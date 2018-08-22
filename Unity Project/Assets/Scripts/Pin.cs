@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pin : MonoBehaviour {
 
-    public float speed = 20f;
+    public float speed = 30f;
     public Rigidbody2D rb;
 
     private float rotatorSpeed;
@@ -21,7 +21,7 @@ public class Pin : MonoBehaviour {
         if (col.tag == "Circle" && col.tag != "Pin")
         {
             transform.SetParent(col.transform);
-            Circle_Rotate.circleSpeed += 3f;
+            Circle_Rotate.circleSpeed += 1.5f;
             isPinned = true;
             Score.scorePoints++;
         }

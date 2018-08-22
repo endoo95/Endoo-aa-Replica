@@ -5,11 +5,14 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
     public GameObject pinPrefab;
+    public GameObject Instrukcje;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+
+        if (Input.GetButtonDown("Fire1") && !InGameMenu.GameIsPaused)
         {
+            Destroy(Instrukcje.gameObject);
             SpawnPin();
         }
 

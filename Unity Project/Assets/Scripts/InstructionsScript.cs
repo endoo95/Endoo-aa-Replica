@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InstructionsScript : MonoBehaviour {
 
-    public int timer = 10;
+    public int timer = 5;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +18,7 @@ public class InstructionsScript : MonoBehaviour {
         if (timer <= 0)
         {
             StopCoroutine("InstructionTimer");
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
 	}
 

@@ -9,21 +9,21 @@ public class Score : MonoBehaviour {
     public Text HText;
 
     public static int scorePoints;
-    public static int hScorePoints = 0;
 
 	// Use this for initialization
 	void Start () {
         scorePoints = 0;
-	}
+        HText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (hScorePoints < scorePoints)
+        if (PlayerPrefs.GetInt("HighScore", 0) < scorePoints)
         {
-            hScorePoints = scorePoints;
+            PlayerPrefs.SetInt("HighScore", scorePoints);
+            HText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
         }
 
         Text.text = scorePoints.ToString();
-        HText.text = hScorePoints.ToString();
     }
 }
