@@ -8,13 +8,14 @@ public class InGameMenu : MonoBehaviour {
     public static bool GameIsPaused = false;
 
     public GameObject InGameMenuUI;
+    public GameObject GameCanvas;
 	
 	// Update is called once per frame
 	void Update () {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("wciśniey escape");
+            //Debug.Log("wciśniey escape");
             if (GameIsPaused)
             {
                 Resume();
@@ -30,6 +31,7 @@ public class InGameMenu : MonoBehaviour {
     public void Resume()
     {
         InGameMenuUI.SetActive(false);
+        GameCanvas.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -37,6 +39,7 @@ public class InGameMenu : MonoBehaviour {
     void Pause()
     {
         InGameMenuUI.SetActive(true);
+        GameCanvas.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

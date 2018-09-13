@@ -26,4 +26,9 @@ public class Score : MonoBehaviour {
 
         Text.text = scorePoints.ToString();
     }
+
+    public void ResetHighScore()
+    {
+        PlayerPrefs.SetInt("HighScore", 0);
+    }
 }
