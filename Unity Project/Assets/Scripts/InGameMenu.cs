@@ -9,9 +9,15 @@ public class InGameMenu : MonoBehaviour {
 
     public GameObject InGameMenuUI;
     public GameObject GameCanvas;
-	
-	// Update is called once per frame
-	void Update () {
+    public GameObject audioManager;
+
+    private void Start()
+    {
+        audioManager = GameObject.Find("AudioManager");
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -48,6 +54,7 @@ public class InGameMenu : MonoBehaviour {
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
+        Destroy(audioManager);
         SceneManager.LoadScene(0);
     }
 }
