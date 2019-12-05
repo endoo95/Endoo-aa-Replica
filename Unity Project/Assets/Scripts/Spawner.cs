@@ -7,6 +7,12 @@ public class Spawner : MonoBehaviour {
     public GameObject pinPrefab;
     public GameObject Instrukcje;
 
+    public AudioSource spawnedPin;
+
+    private void Start()
+    {
+        //GameObject.FindGameObjectWithTag("AudioManager").GetComponentInChildren(AudioClip("Beep");
+    }
     void Update()
     {
 
@@ -20,6 +26,7 @@ public class Spawner : MonoBehaviour {
 
     void SpawnPin()
     {
+        spawnedPin.Play();
         Instantiate(pinPrefab, transform.position, transform.rotation);
     }
 }

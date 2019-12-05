@@ -7,6 +7,9 @@ public class Pin : MonoBehaviour {
     public float speed = 30f;
     public Rigidbody2D rb;
 
+    public AudioSource pinHit;
+    public AudioSource pinToPin;
+
     private float rotatorSpeed;
     private bool isPinned = false;
 
@@ -24,9 +27,11 @@ public class Pin : MonoBehaviour {
             Circle_Rotate.circleSpeed += 1.5f;
             isPinned = true;
             Score.scorePoints++;
+            pinHit.Play();
         }
         else if (col.tag == "Pin")
         {
+            pinToPin.Play();
             GetComponent<SpriteRenderer>().color = Color.red;
             FindObjectOfType<GameManager>().GameEnded();
         }

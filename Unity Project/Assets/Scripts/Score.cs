@@ -13,15 +13,15 @@ public class Score : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         scorePoints = 0;
-        HText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        HText.text = PlayerPrefs.GetInt("HighScore").ToString();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (PlayerPrefs.GetInt("HighScore", 0) < scorePoints)
+        if (PlayerPrefs.GetInt("HighScore") < scorePoints)
         {
             PlayerPrefs.SetInt("HighScore", scorePoints);
-            HText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+            HText.text = PlayerPrefs.GetInt("HighScore").ToString();
         }
 
         Text.text = scorePoints.ToString();
