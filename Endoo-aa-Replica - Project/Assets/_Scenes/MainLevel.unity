@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -167,6 +168,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -485,6 +487,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -1557,6 +1560,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -1637,6 +1641,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -1747,6 +1752,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -2237,11 +2243,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2946960438445322762, guid: 02ab5f24bba5dfc459bdff7fb85ce2bd,
-        type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
     - target: {fileID: 2946960438445322761, guid: 02ab5f24bba5dfc459bdff7fb85ce2bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2297,6 +2298,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2946960438445322762, guid: 02ab5f24bba5dfc459bdff7fb85ce2bd,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02ab5f24bba5dfc459bdff7fb85ce2bd, type: 3}
 --- !u!1001 &3225224334622652426
@@ -2306,11 +2312,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1585442173}
     m_Modifications:
-    - target: {fileID: 6724276638701239522, guid: 0b9a5cb1415f060478c24049a6e881b9,
-        type: 3}
-      propertyPath: m_Name
-      value: HighScore
-      objectReference: {fileID: 0}
     - target: {fileID: 3225224334734894601, guid: 0b9a5cb1415f060478c24049a6e881b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2415,6 +2416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724276638701239522, guid: 0b9a5cb1415f060478c24049a6e881b9,
+        type: 3}
+      propertyPath: m_Name
+      value: HighScore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b9a5cb1415f060478c24049a6e881b9, type: 3}
