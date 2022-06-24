@@ -9,13 +9,14 @@ public class Spawner : MonoBehaviour {
 
     public AudioSource spawnedPin;
 
+    public GameObject _children;
+
     private void Start()
     {
         //GameObject.FindGameObjectWithTag("AudioManager").GetComponentInChildren(AudioClip("Beep");
     }
     void Update()
     {
-
         if (Input.GetButtonDown("Fire1") && !InGameMenu.GameIsPaused)
         {
             Destroy(Instrukcje.gameObject);
@@ -27,6 +28,7 @@ public class Spawner : MonoBehaviour {
     void SpawnPin()
     {
         spawnedPin.Play();
-        Instantiate(pinPrefab, transform.position, transform.rotation);
+        var newPin = Instantiate(pinPrefab, transform.position, transform.rotation);
+        newPin.transform.parent = gameObject.transform;
     }
 }

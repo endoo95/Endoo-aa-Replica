@@ -11,3 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/MainLevel.unity
     guid: f92eb688f8cc2a54b9ee899cd4f594de
+  - enabled: 1
+    path: Assets/_Scenes/RouletteLevel.unity
+    guid: aed1d481359370c4db469dfb7285165b
+  m_configObjects: {}
