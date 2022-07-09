@@ -31,7 +31,7 @@ public class Pin : MonoBehaviour {
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(!isPinned)
             rb.MovePosition(rb.position + Vector2.up * speed * Time.deltaTime);
